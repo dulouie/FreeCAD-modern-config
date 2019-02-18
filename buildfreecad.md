@@ -28,18 +28,18 @@ cmake -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_IMAGE=OFF\
       -DBUILD_TUX=OFF\
       -DBUILD_FEM=OFF \
-      -DBUILD_FEM_NETGEN=OFF
+      -DBUILD_FEM_NETGEN=OFF ..
   ```
 
 
 #Solvespace build options
 
 ```bash
-cmake -DCMAKE_BUILD_TYPE=Release 
-	-DBUILD_PYTHON=1 
-	-DPYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3 
-	-DPYTHON_INCLUDE_DIR=/usr/include/python3.6/ 
-	-DPYTHON_LIBRARY=/usr/lib/python3.6/
+cmake -DCMAKE_BUILD_TYPE=Release \
+	-DBUILD_PYTHON=1 \
+	-DPYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3 \
+	-DPYTHON_INCLUDE_DIR=/usr/include/python3.6/ \
+	-DPYTHON_LIBRARY=/usr/lib/python3.6/ ..
 ```
 
 
