@@ -9,3 +9,9 @@ Just copy the `user.cfg` in to your FreeCAD settings folder.
 
 ### Linux & MacOS
 `~/.FreeCAD/user.cfg` 
+
+### Screenshots
+
+![freecad-modern.png](/pictures/freecad-modern.png)
+
+![freecad-modern.png](/pictures/sketch-modern.png)
