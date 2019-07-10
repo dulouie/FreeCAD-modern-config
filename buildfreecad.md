@@ -1,4 +1,5 @@
-#FreeCAD build options
+## FreeCAD build options
+
 ```bash
 cmake -DCMAKE_BUILD_TYPE=Release \
       -BUILD_ENABLE_CXX_STD="C++17" \
@@ -32,14 +33,12 @@ cmake -DCMAKE_BUILD_TYPE=Release \
   ```
 
 
-#Solvespace build options
+## Solvespace build options
 
 ```bash
 cmake -DCMAKE_BUILD_TYPE=Release \
-	-DBUILD_PYTHON=1 \
-	-DPYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3 \
-	-DPYTHON_INCLUDE_DIR=/usr/include/python3.6/ \
-	-DPYTHON_LIBRARY=/usr/lib/python3.6/ ..
+      -DBUILD_PYTHON=1 \
+      -DPYTHON_EXECUTABLE:FILEPATH=/usr/bin/python3 \
+      -DPYTHON_INCLUDE_DIR=/usr/include/python3.6/ \
+      -DPYTHON_LIBRARY=/usr/lib/python3.6/ ..
 ```
-
-
