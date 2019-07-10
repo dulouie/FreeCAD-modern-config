@@ -1,8 +1,11 @@
-#FreeCAD modern config
+# FreeCAD modern config
+This repository contains FreeCAD config files that attempt to make Freecad look more like a modern CAD system.  
 
-These repo include config files to look freecad like modern CAD system.
-Just copy the user.cfg in your settings folder.
+## Instructions
+Just copy the `user.cfg` in to your FreeCAD settings folder.
 
-C:\Documents and Settings\username\Application Data\FreeCAD\user.cfg   
+### Windows
+`C:\Documents and Settings\username\Application Data\FreeCAD\user.cfg`
 
-/home/username/.FreeCAD/user.cfg 
+### Linux & MacOS
+`~/.FreeCAD/user.cfg` 
