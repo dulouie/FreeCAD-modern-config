@@ -4,6 +4,9 @@ This repository contains FreeCAD config files that attempt to make Freecad look 
 ## Instructions
 Just copy the `user.cfg` in to your FreeCAD settings folder.
 
+Recommended is the Selector Toolbar.
+https://github.com/triplus/SelectorToolbar
+
 ### Windows
 `C:\Documents and Settings\username\Application Data\FreeCAD\user.cfg`
 
