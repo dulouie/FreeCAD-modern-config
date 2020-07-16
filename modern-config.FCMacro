@@ -1,7 +1,7 @@
 import FreeCAD
 
 grp = FreeCAD.ParamGet('User parameter:BaseApp/Preferences/View')
-parameters = {
+dictionary = {
     "BacklightColor" : 4294967295,
     "BackgroundColor" : 4294967295,
     "BackgroundColor2" : 4294967295,
@@ -43,7 +43,5 @@ def setParameter(parameter, value):
         grp.SetBool(parameter, value)
 
 
-for item, value in parameters.items():
-    setParameter(item, value)
-
-
+for parameter, value in dictionary.items():
+    setParameter(parameter, value)

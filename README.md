@@ -1,17 +1,20 @@
 # FreeCAD modern config
-This repository contains FreeCAD config files that attempt to make Freecad look more like a modern CAD system.  
+This repository contains FreeCAD macros that attempt to make Freecad look more like a modern CAD system.  
 
 ## Instructions
-Just copy the `user.cfg` in to your FreeCAD settings folder.
+Copy the `modern-config.FCMacro` in to your FreeCAD macro folder.
+Execute the macro from FreeCAD. If you need help, look at: https://wiki.freecadweb.org/How_to_install_macros
+
+The macro mostly change colors and some minor setting.
 
 Recommended is the Selector Toolbar.
 https://github.com/triplus/SelectorToolbar
 
 ### Windows
-`C:\Documents and Settings\username\Application Data\FreeCAD\user.cfg`
+`C:\Documents and Settings\username\Application Data\FreeCAD\Macro`
 
 ### Linux & MacOS
-`~/.FreeCAD/user.cfg` 
+`~/.FreeCAD/Macro` 
 
 ### Screenshots
 
