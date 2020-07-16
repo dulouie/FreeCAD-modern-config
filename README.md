@@ -5,7 +5,7 @@ This repository contains FreeCAD macros that attempt to make Freecad look more l
 Copy the `modern-config.FCMacro` in to your FreeCAD macro folder.
 Execute the macro from FreeCAD. If you need help, look at: https://wiki.freecadweb.org/How_to_install_macros
 
-The macro mostly change colors and some minor setting.
+The macro mostly change colors and some minor settings.
 
 Recommended is the Selector Toolbar.
 https://github.com/triplus/SelectorToolbar
