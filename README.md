@@ -1,5 +1,9 @@
 # FreeCAD modern config
-This repository contains FreeCAD macros that attempt to make Freecad look more like a modern CAD system.  
+This repository contains FreeCAD macros that attempt to make Freecad look more like a modern CAD system.
+
+## Download
+
+[modern-config.FCMacro](https://raw.githubusercontent.com/dulouie/FreeCAD-modern-config/master/modern-config.FCMacro)
 
 ## Instructions
 Copy the `modern-config.FCMacro` in to your FreeCAD macro folder.
