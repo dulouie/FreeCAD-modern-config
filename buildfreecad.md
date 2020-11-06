@@ -2,11 +2,11 @@
 
 ```bash
 cmake -DCMAKE_BUILD_TYPE=Release \
-      -BUILD_ENABLE_CXX_STD="C++19" \
       -DBUILD_QT5=ON \
       -DFREECAD_USE_OCC_VARIANT="Official Version" \
       -DPYTHON_EXECUTABLE=/usr/bin/python3 \
       -DBUILD_ARCH=ON \
+      -DBUILD_DRAFT=ON \
       -DBUILD_INSPECTION=OFF \
       -DBUILD_MATERIAL=OFF \
       -DBUILD_MESH=ON \
@@ -21,14 +21,14 @@ cmake -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_WEB=OFF\
       -DBUILD_COMPLETE=OFF\
       -DBUILD_TEST=OFF\
-      -DBUILD_SURFACE=OFF\
+      -DBUILD_SURFACE=ON\
       -DBUILD_RAYRACING=OFF\
       -DBUILD_POINTS=OFF\
       -DBUILD_PLOT=OFF\
       -DBUILD_IMAGE=OFF\
       -DBUILD_TUX=OFF\
-      -DBUILD_FEM=OFF \
-      -DBUILD_FEM_NETGEN=OFF ..
+      -DBUILD_FEM=ON \
+      -DBUILD_FEM_NETGEN=ON ..
   ```
 
 
