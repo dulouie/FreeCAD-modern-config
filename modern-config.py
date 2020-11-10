@@ -1,12 +1,14 @@
 import FreeCAD
 
-def setParameter(path, parameter, value):
+def setParameter(group, parameter, value):
     if type(value) is int:
-        path.SetUnsigned(parameter, value)
-    if type(value) is float:
-        path.SetFloat(parameter, value)
-    if type(value) is bool:
-        path.SetBool(parameter, value)
+        group.SetUnsigned(parameter, value)
+    elif type(value) is float:
+        group.SetFloat(parameter, value)
+    elif type(value) is bool:
+        group.SetBool(parameter, value)
+    elif type(value) is str: 
+        group.SetString(parameter, value)
 
 dictionary = {
     FreeCAD.ParamGet('User parameter:BaseApp/Preferences/View'):
@@ -40,14 +42,66 @@ dictionary = {
         "ExprBasedConstrDimColor" : 2404975359,
         "CursorTextColor" : 775173887,
         "CursorCrosshairColor" : 775173887,
-        "CreateLineColor" : 775173887
+        "CreateLineColor" : 775173887,
+        "AntiAliasing" : 4,
+        "UseVBO" : True,
+
     },
     FreeCAD.ParamGet('User parameter:BaseApp/Preferences/DockWindows/TreeView') : {"Enabled" : True},
     FreeCAD.ParamGet('User parameter:BaseApp/Preferences/DockWindows/PropertyView') : {"Enabled" : True},
     FreeCAD.ParamGet('User parameter:BaseApp/Preferences/DockWindows/DAGView') : {"Enabled" : False},
-    FreeCAD.ParamGet('User parameter:BaseApp/Preferences/DockWindows/ComboView') : {"Enabled" : True}
+    FreeCAD.ParamGet('User parameter:BaseApp/Preferences/DockWindows/ComboView') : {"Enabled" : True},
+    FreeCAD.ParamGet('User parameter:BaseApp/MainWindow/DockWindows') :
+    {
+        "Std_ReportView" : False,
+        "Std_SelectionView" : False,
+        "Std_ComboView" : True,
+        "Std_PythonView" : True,
+        "Std_TreeView" : True,
+        "Std_PropertyView" : False,
+        "Std_ReportView" : False
+    },
+    FreeCAD.ParamGet('User parameter:BaseApp/MainWindow/Toolbars') :
+    {
+        "File" : False,
+        "Workbench" : True,
+        "Macro" : False,
+        "View" : False,
+        "Structure" : True,
+        "Navigation" : False,
+        "Part Design Modeling" : True,
+        "Part Design Helper" : True,
+        "Sketcher" : True,
+        "Sketcher geometries" : True,
+        "Sketcher constraints" : True,
+        "Sketcher tools" : False,
+        "Sketcher B-spline tools" : False,
+        "Sketcher virtual space" : False
+    },
+    FreeCAD.ParamGet('User parameter:BaseApp/Preferences/MainWindow') : {"StyleSheet" : "Light-blue.qss"},
+    FreeCAD.ParamGet('User parameter:BaseApp/Preferences/General') :
+    {
+        "AutoloadModule" : "PartDesignWorkbench",
+        "Language" : "English"
+    },
+    FreeCAD.ParamGet('User parameter:Tux/PersistentToolbars/User/PartDesignWorkbench') :
+    {
+        "Saved" : True,
+        "Top" : "Workbench",
+        "Left" : "Break,Structure,Part Design Helper,Break,Part Design Modeling",
+        "Right" : "",
+        "Bottom" : ""
+    },
+    FreeCAD.ParamGet('User parameter:Tux/PersistentToolbars/User/SketcherWorkbench') :
+    {
+        "Saved" : True,
+        "Top" : "Workbench,Sketcher,Sketcher tools,Sketcher B-spline tools,Sketcher virtual space",
+        "Left" : "Break,Structure,Sketcher geometries,Break,Sketcher constraints",
+        "Right" : "",
+        "Bottom" : ""
+    }
 }
 
-for path, item in dictionary.items():
-    for key in item:
-        setParameter(path, key, item[key])
+for group, items in dictionary.items():
+    for key in items:
+        setParameter(group, key, items[key])
