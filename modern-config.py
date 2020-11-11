@@ -2,7 +2,10 @@ import FreeCAD
 
 def setParameter(group, parameter, value):
     if type(value) is int:
-        group.SetUnsigned(parameter, value)
+        if value > 255:
+            group.SetUnsigned(parameter, value)
+        else:
+            group.SetInt(parameter, value)
     elif type(value) is float:
         group.SetFloat(parameter, value)
     elif type(value) is bool:
@@ -47,16 +50,18 @@ dictionary = {
         "UseVBO" : True,
 
     },
+    FreeCAD.ParamGet('User parameter:BaseApp/Preferences/Mod/Part') : {"MeshDeviation" : 0.2},
+    FreeCAD.ParamGet('User parameter:BaseApp/Preferences/Mod/Mesh') : {"MaxDeviationExport" : 0.02},
     FreeCAD.ParamGet('User parameter:BaseApp/Preferences/DockWindows/TreeView') : {"Enabled" : True},
-    FreeCAD.ParamGet('User parameter:BaseApp/Preferences/DockWindows/PropertyView') : {"Enabled" : True},
+    FreeCAD.ParamGet('User parameter:BaseApp/Preferences/DockWindows/PropertyView') : {"Enabled" : False},
     FreeCAD.ParamGet('User parameter:BaseApp/Preferences/DockWindows/DAGView') : {"Enabled" : False},
-    FreeCAD.ParamGet('User parameter:BaseApp/Preferences/DockWindows/ComboView') : {"Enabled" : True},
+    FreeCAD.ParamGet('User parameter:BaseApp/Preferences/DockWindows/ComboView') : {"Enabled" : False},
     FreeCAD.ParamGet('User parameter:BaseApp/MainWindow/DockWindows') :
     {
         "Std_ReportView" : False,
         "Std_SelectionView" : False,
         "Std_ComboView" : True,
-        "Std_PythonView" : True,
+        "Std_PythonView" : False,
         "Std_TreeView" : True,
         "Std_PropertyView" : False,
         "Std_ReportView" : False
@@ -83,7 +88,12 @@ dictionary = {
     {
         "AutoloadModule" : "PartDesignWorkbench",
         "Language" : "English"
-    },
+    }
+}
+
+# Toolbar placement left side
+# temporary excluded
+toolbar = {
     FreeCAD.ParamGet('User parameter:Tux/PersistentToolbars/User/PartDesignWorkbench') :
     {
         "Saved" : True,
