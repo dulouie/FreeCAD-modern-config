@@ -3,7 +3,7 @@ This repository contains FreeCAD macros that attempt to make Freecad look more l
 
 ## Download
 
-[modern-config.FCMacro](https://raw.githubusercontent.com/dulouie/FreeCAD-modern-config/master/modern-config.py)
+[modern-config.py](https://raw.githubusercontent.com/dulouie/FreeCAD-modern-config/master/modern-config.py)
 
 ## Instructions
 Copy the `modern-config.FCMacro` in to your FreeCAD macro folder.
