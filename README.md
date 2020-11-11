@@ -11,9 +11,6 @@ Execute the macro from FreeCAD. If you need help, look at: https://wiki.freecadw
 
 The macro mostly change colors and some minor settings.
 
-Recommended is the Selector Toolbar.
-https://github.com/triplus/SelectorToolbar
-
 ### Windows
 `C:\Documents and Settings\username\Application Data\FreeCAD\Macro`
 
@@ -22,6 +19,6 @@ https://github.com/triplus/SelectorToolbar
 
 ### Screenshots
 
-![freecad-modern.png](/pictures/freecad-modern.png)
+![freecad-modern.png](/pictures/modern-config-1.png)
 
-![freecad-modern.png](/pictures/sketch-modern.png)
+![freecad-modern.png](/pictures/modern-config-2.png)
