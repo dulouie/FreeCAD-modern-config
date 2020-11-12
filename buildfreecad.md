@@ -41,3 +41,13 @@ cmake -DCMAKE_BUILD_TYPE=Release \
       -DPYTHON_INCLUDE_DIR=/usr/include/python3.6/ \
       -DPYTHON_LIBRARY=/usr/lib/python3.6/ ..
 ```
+
+## Solvespace install on Ubuntu 20.04
+
+* `git clone https://github.com/realthunder/slvs_py`
+* `cd slvs_py`
+* `sudo apt install docker.io`
+* `pip3 install scikit-build`
+* `git submodule update --init slvs`
+* `./make.sh`
+* `pip3 install .`
