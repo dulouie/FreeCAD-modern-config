@@ -14,7 +14,11 @@ Execute the macro from FreeCAD. If you need help, look at: https://wiki.freecadw
 The macro mostly change colors and some minor settings.
 
 ### Windows
-`C:\Documents and Settings\username\Application Data\FreeCAD\Macro`
+`C:\Users\username\AppData\Roaming\FreeCAD\Macro`
+
+or with environment variable:
+
+`%appdata%\FreeCAD\Macro`
 
 ### Linux & MacOS
 `~/.FreeCAD/Macro` 
