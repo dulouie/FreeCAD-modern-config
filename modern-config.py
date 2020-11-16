@@ -1,13 +1,16 @@
 import FreeCAD
+import os.path
 from shutil import copyfile
 
 def backupConfig():
     userDir = FreeCAD.getUserAppDataDir()
     src = userDir + "user.cfg"
     des = userDir + "user_backup.cfg"
-    copyfile(src, des)
-    print("Backup created on " + des)
-
+    if(not os.path.isfile(des)):
+        copyfile(src, des)
+        print("Backup created on " + des)
+    else:
+        print("Backup already exist")
 
 def setParameter(group, parameter, value):
     if type(value) is int:
