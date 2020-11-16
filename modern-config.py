@@ -1,4 +1,13 @@
 import FreeCAD
+from shutil import copyfile
+
+def backupConfig():
+    userDir = FreeCAD.getUserAppDataDir()
+    src = userDir + "user.cfg"
+    des = userDir + "user_backup.cfg"
+    copyfile(src, des)
+    print("Backup created on " + des)
+
 
 def setParameter(group, parameter, value):
     if type(value) is int:
@@ -112,6 +121,8 @@ toolbar = {
     }
 }
 
+backupConfig()
 for group, items in dictionary.items():
     for key in items:
         setParameter(group, key, items[key])
+print("New parameters written")
