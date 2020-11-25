@@ -12,7 +12,7 @@ Copy the `modern-config.py` in to your FreeCAD macro folder.
 Execute the macro from FreeCAD. If you need help, look at: https://wiki.freecadweb.org/How_to_install_macros
 
 The macro mostly change colors and some minor settings.
-
+Backup of your old user.cfg will be created automatically as user_backup.cfg in the same directory. If you will reset your config, just delete %appdata%\FreeCAD\config.cfg and rename config_backup.cfg to config.cfg.
 ### Windows
 `C:\Users\username\AppData\Roaming\FreeCAD\Macro`
 
