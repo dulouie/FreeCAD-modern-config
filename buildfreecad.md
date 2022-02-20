@@ -2,13 +2,14 @@
 
 ```bash
 cmake -DCMAKE_BUILD_TYPE=Release \
+      -DBUILD_ENABLE_CXX_STD="C++17" \
       -DBUILD_QT5=ON \
       -DFREECAD_USE_OCC_VARIANT="Official Version" \
       -DPYTHON_EXECUTABLE=/usr/bin/python3 \
       -DBUILD_ARCH=ON \
       -DBUILD_DRAFT=ON \
       -DBUILD_INSPECTION=OFF \
-      -DBUILD_MATERIAL=OFF \
+      -DBUILD_MATERIAL=ON \
       -DBUILD_MESH=ON \
       -DBUILD_MESH_PART=ON \
       -DBUILD_OPENSCAD=OFF \
@@ -27,8 +28,8 @@ cmake -DCMAKE_BUILD_TYPE=Release \
       -DBUILD_PLOT=OFF\
       -DBUILD_IMAGE=OFF\
       -DBUILD_TUX=OFF\
-      -DBUILD_FEM=ON \
-      -DBUILD_FEM_NETGEN=ON ..
+      -DBUILD_FEM=OFF \
+      -DBUILD_FEM_NETGEN=OFF ..
   ```
 
 
